@@ -1,5 +1,5 @@
 # record_ros
-[![Build Status](https://travis-ci.org/epfl-lasa/record_ros.svg?branch=master)](https://travis-ci.org/epfl-lasa/record_ros/branches)
+[![Build Status](https://travis-ci.com/frdedynamics/record_ros.svg?branch=master)](https://travis-ci.com/frdedynamics/record_ros/branches)
 
 A callback wrapper for rosbag record, where a ros service allows a user to start recording a set of topics and 
 also stop.
