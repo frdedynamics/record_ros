@@ -4,10 +4,15 @@ project(record_ros)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED roscpp message_generation rosbag std_msgs)
+find_package(catkin REQUIRED roscpp message_generation rosbag std_msgs genmsg)
 find_package(Boost REQUIRED COMPONENTS regex )
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -O3 -std=c++11 -mtune=native -fPIC -Wall")        ## Optimize
+
+add_message_files(
+   FILES
+   record_status.msg
+)
 
 add_service_files(
    FILES

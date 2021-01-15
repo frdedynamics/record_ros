@@ -1,4 +1,5 @@
 #include "record_ros/record.h"
+#include "record_ros/record_status.h"
 
 #include <ros/ros.h>
 #include <boost/regex.hpp>

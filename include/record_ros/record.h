@@ -2,6 +2,7 @@
 #define RECORD_ROS_RECORD_H_
 
 #include "record_ros/String_cmd.h"
+#include "record_ros/record_status.h"
 #include <std_msgs/String.h>
 #include <rosbag/recorder.h>
 
@@ -22,6 +23,8 @@ private:
     bool                        b_record;
     ros::ServiceServer          service_srv;
     ros::Subscriber             topic_cmd;
+    ros::Publisher              record_status_pub;
+    record_ros::record_status   record_status_msg;
     ros::Timer                  shutdown_timer;
 
 };
