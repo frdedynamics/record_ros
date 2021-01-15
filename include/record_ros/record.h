@@ -22,6 +22,7 @@ private:
     bool                        b_record;
     ros::ServiceServer          service_srv;
     ros::Subscriber             topic_cmd;
+    ros::Timer                  shutdown_timer;
 
 };
 
