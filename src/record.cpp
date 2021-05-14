@@ -11,7 +11,7 @@ std::string stampToString(const ros::Time& stamp, const std::string format="%Y-%
    {
       const int output_size = 100;
       char output[output_size];
-      std::time_t raw_time = static_cast<time_t>(stamp.sec);
+      std::time_t raw_time = static_cast<time_t>(stamp.sec + stamp.nsec/1e9);
       struct tm* timeinfo = localtime(&raw_time);
       std::strftime(output, output_size, format.c_str(), timeinfo);
       return std::string(output);
